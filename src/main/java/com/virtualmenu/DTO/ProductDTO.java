@@ -1,16 +1,16 @@
 package com.virtualmenu.DTO;
 
+import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.Column;
-
 @Data
+@Builder
 public class ProductDTO {
-    private Integer id;
+    private Long id;
 
     private String name;
 
-    private String descripion;
+    private String description;
 
     private Double price;
 }

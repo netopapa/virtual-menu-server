@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class VirtualMenuApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(VirtualMenuApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(VirtualMenuApplication.class, args);
+    }
 
 }
