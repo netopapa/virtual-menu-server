@@ -1,17 +1,14 @@
 package com.virtualmenu.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Product extends BaseModel {
 
     @Id
@@ -25,5 +22,5 @@ public class Product extends BaseModel {
     private String description;
 
     @Column(nullable = false)
-    private Double price;
+    private BigDecimal price;
 }

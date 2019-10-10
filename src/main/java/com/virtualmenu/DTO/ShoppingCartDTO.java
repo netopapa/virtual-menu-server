@@ -3,6 +3,8 @@ package com.virtualmenu.DTO;
 import lombok.Builder;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 public class ShoppingCartDTO {
@@ -12,4 +14,6 @@ public class ShoppingCartDTO {
     private RestaurantTableDTO table;
 
     private Boolean closed;
+
+    private BigDecimal total;
 }

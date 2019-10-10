@@ -1,17 +1,13 @@
 package com.virtualmenu.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "cooking_request")
 public class CookingRequest extends BaseModel {
 
@@ -20,10 +16,10 @@ public class CookingRequest extends BaseModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne()
+    @ManyToOne
     private Product product;
 
-    @ManyToOne()
+    @ManyToOne
     private ShoppingCart shoppingCart;
 
     @Column(nullable = false)

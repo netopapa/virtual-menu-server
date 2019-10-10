@@ -12,6 +12,7 @@ public class ShoppingCartMapper implements GenericMapper<ShoppingCart, ShoppingC
         return ShoppingCartDTO.builder()
                 .id(entity.getId())
                 .closed(entity.getClosed())
+                .total(entity.getTotal())
                 .table(entity.getTable() != null ? restaurantTableMapper.convertToDTO(entity.getTable()) : null)
                 .build();
     }
@@ -21,6 +22,7 @@ public class ShoppingCartMapper implements GenericMapper<ShoppingCart, ShoppingC
         return ShoppingCart.builder()
                 .id(dto.getId())
                 .closed(dto.getClosed())
+                .total(dto.getTotal())
                 .table(dto.getTable() != null ? restaurantTableMapper.convertToEntity(dto.getTable()) : null)
                 .build();
     }

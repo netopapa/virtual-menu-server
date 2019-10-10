@@ -1,17 +1,14 @@
 package com.virtualmenu.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class ShoppingCart extends BaseModel {
 
     @Id
@@ -24,4 +21,10 @@ public class ShoppingCart extends BaseModel {
 
     @Column(nullable = false)
     private Boolean closed;
+
+    @Column(nullable = false)
+    private Boolean payd;
+
+    @Column(nullable = false)
+    private BigDecimal total;
 }

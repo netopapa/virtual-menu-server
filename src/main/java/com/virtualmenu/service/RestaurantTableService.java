@@ -1,10 +1,14 @@
 package com.virtualmenu.service;
 
+import com.virtualmenu.exception.NotFoundException;
 import com.virtualmenu.model.RestaurantTable;
 import com.virtualmenu.repository.BaseRepository;
 import com.virtualmenu.repository.RestaurantTableRepository;
+import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class RestaurantTableService extends GenericService<RestaurantTable, Long> {
@@ -18,6 +22,16 @@ public class RestaurantTableService extends GenericService<RestaurantTable, Long
     ) {
         super(repository);
         this.restaurantTableRepository = restaurantTableRepository;
+    }
+
+    public RestaurantTable startTable(Long id) {
+        Optional<RestaurantTable> restaurantTable = restaurantTableRepository.findById(id);
+        if (restaurantTable.isPresent()) {
+            restaurantTable.get().setBusy(true);
+            return super.update(restaurantTable.get());
+        } else {
+            throw new NotFoundException("Mesa não encontrada");
+        }
     }
 
 }

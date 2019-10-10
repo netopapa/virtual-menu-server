@@ -26,7 +26,7 @@ public abstract class GenericService<T extends BaseModel, I extends Serializable
     private EntityManager entityManager;
 
     public GenericService(BaseRepository<T, I> repository) {
-        setRepository(repository);
+        this.repository = repository;
     }
 
     public T saveOrUpdate(T entity) {

@@ -3,6 +3,8 @@ package com.virtualmenu.DTO;
 import lombok.Builder;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 public class ProductDTO {
@@ -12,5 +14,5 @@ public class ProductDTO {
 
     private String description;
 
-    private Double price;
+    private BigDecimal price;
 }
