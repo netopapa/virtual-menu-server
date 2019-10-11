@@ -1,5 +1,6 @@
 package com.virtualmenu.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @Data
 @Builder
+@AllArgsConstructor
 public class Product extends BaseModel {
 
     @Id
@@ -23,4 +25,6 @@ public class Product extends BaseModel {
 
     @Column(nullable = false)
     private BigDecimal price;
+
+    public Product () {}
 }
