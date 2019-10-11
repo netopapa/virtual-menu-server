@@ -31,7 +31,7 @@ public class ShoppingCartService extends GenericService<ShoppingCart, Long> {
     }
 
     @Override
-    public ShoppingCart add (ShoppingCart cart) {
+    public ShoppingCart add(ShoppingCart cart) {
         RestaurantTable restaurantTable = restaurantTableService.startTable(cart.getTable().getId());
         cart.setTable(restaurantTable);
         cart.setClosed(false);

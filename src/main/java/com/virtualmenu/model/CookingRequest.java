@@ -1,13 +1,15 @@
 package com.virtualmenu.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "cooking_request")
 public class CookingRequest extends BaseModel {
 
