@@ -4,7 +4,6 @@ import com.virtualmenu.exception.NotFoundException;
 import com.virtualmenu.model.RestaurantTable;
 import com.virtualmenu.repository.BaseRepository;
 import com.virtualmenu.repository.RestaurantTableRepository;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
